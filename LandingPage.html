@@ -7,32 +7,33 @@
     <title>BAMBOO</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css">
-    <style>
-        
-    @font-face {
-                    font-family: chalkboard;
-                    src: url('chalkboard.ttf');
-                }
-                .font-chalkboard {
-                    font-family: chalkboard !important;
-                }
-    </style>
 </head>
     <body>
-        <div class="flex w-screen h-screen bg-no-repeat bg-cover justify sm:bg-left-bottom" style="background-image: url('mainpage.png');">
-            <div class="absolute flex flex-col items-center justify-center w-full h-full justify-items-center">
-                <div class="grid grid-cols-1 gap-10">
-                    <div class="text-center justify-items-center">
-                        <a class="ml-0 text-5xl text-gray-600 no-underline border-none font-chalkboard hover:underline lg:text-5xl hover:text-red-700 focus:outline-none active:text-red-700" href="store" target="_blank">STORE</a>
+        <div class="w-screen h-screen bg-fixed bg-right bg-cover" style="background-image: url('landingbg.png');">
+            <div class="container fixed absolute max-w-xs ml-4 overflow-hidden bg-transparent md:mt-0 md:right-32">
+                <div class="grid grid-cols-1 gap-0">
+                    <div class="flex items-start">
+                        <img src="landinglogo.png" class="z-10 w-auto h-auto p-6 border-rounded">
                     </div>
-                    <div class="text-center justify-items-center">
-                        <a class="ml-0 text-4xl text-gray-600 no-underline border-none font-chalkboard hover:underline lg:text-5xl hover:text-red-700 focus:outline-none active:text-red-700" href="ListenPage.html" target="_blank">LISTEN</a>
-                    </div>
-                    <div class="text-center justify-items-center">
-                        <a class="ml-0 text-4xl text-gray-600 no-underline border-none font-chalkboard hover:underline lg:text-5xl hover:text-red-700 focus:outline-none active:text-red-700" href="https://www.youtube.com/user/BAMBOOMUSICLIVE" target="_blank">WATCH</a>
-                    </div>
-                    <div class="text-center justify-items-center">
-                        <a class="ml-0 text-4xl text-gray-600 no-underline border-none font-chalkboard hover:underline lg:text-5xl hover:text-red-700 focus:outline-none active:text-red-700" href="ConnectPage.html" target="_blank">CONNECT</a>
+                        <div>
+                            <a href="StorePage.html" target="_blank">
+                                <img src="STORE.png" class="z-10 w-auto h-auto p-3 transform hover:scale-105">
+                            </a>
+                        </div>
+                            <div>
+                                <a href="ListenPage.html">
+                                    <img src="LISTEN.png" class="z-10 w-auto h-auto p-3 transform hover:scale-105">
+                                </a>
+                            </div>
+                        <div>
+                            <a href="https://www.youtube.com/user/BAMBOOMUSICLIVE">
+                                <img src="WATCH.png" class="z-10 w-auto h-auto p-3 transform hover:scale-105">
+                            </a>
+                        </div>
+                    <div>
+                        <a href="ConnectPage.html">
+                            <img src="Connect.png" class="z-10 w-auto h-auto p-3 transform hover:scale-105">
+                        </a>
                     </div>
                 </div>
             </div>

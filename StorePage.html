@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>STORE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+</head>
+<style>
+    @font-face {
+                    font-family: bebas;
+                    src: url('bebas.ttf');
+                }
+                .font-bebas {
+                    font-family: bebas !important;
+                }
+    .work-sans {
+        font-family: 'Work Sans', sans-serif;
+    }
+            
+    #menu-toggle:checked + #menu {
+        display: block;
+    }
+    
+    .hover\:grow {
+        transition: all 0.3s;
+        transform: scale(1);
+    }
+    
+    .hover\:grow:hover {
+        transform: scale(1.02);
+    }
+    
+    .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+    }
+    
+    .carousel-item {
+        -webkit-transition: opacity 0.6s ease-out;
+        transition: opacity 0.6s ease-out;
+    }
+    
+    #carousel-1:checked ~ .control-1,
+    #carousel-2:checked ~ .control-2,
+    #carousel-3:checked ~ .control-3 {
+        display: block;
+    }
+    
+    .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+    }
+    
+    #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+    #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+    #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+        color: #000;
+    }
+</style>
+<body class="text-base leading-normal tracking-normal text-gray-600 bg-black work-sans">
+    <div class="container relative mx-auto carousel" style="max-width:1600px";>
+        <div class="relative w-full overflow-hidden carousel-inner ">
+            <!--Slide 1-->
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <div class="absolute opacity-0 carousel-item" style="height:600px;">
+                <div class="flex block w-full h-full pt-6 mx-auto bg-center bg-cover md:bg-right md:pt-0 md:items-center" style="background-image: url('STOREBG.png');">
+                    <div>
+                        <a href="LandingPage.html">
+                            <img src="backw.png" class="absolute object-right-top w-16 h-16 ml-6 transform md:w-20 md:h-20 top-4 hover:scale-125">
+                        </a>
+                    </div>
+                    <div class="container mx-auto">
+                        <div class="flex flex-col items-center w-full px-6 font-extrabold tracking-wide mt-28 md:mt-0 lg:w-1/2 md:ml-16 md:items-start">
+                            <p class="font-thin text-white font-bebas text-9xl">ARTIST</p>
+                            <p class="font-thin text-white font-bebas text-9xl">STORE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center w-full px-6 font-extrabold tracking-wide lg:w-1/2 md:ml-16 md:items-start">
+                <p class="pt-12 mx-12 text-5xl font-thin text-white font-bebas">MERCHANDISE</p>
+            </div>
+                    <div class="flex items-center justify-center w-full mx-auto">
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-3">
+                            <div class="items-center justify-center max-w-xs pl-4 my-10 overflow-hidden bg-gray-200 rounded-3xl w-72">
+                                <div class="container w-64 h-64 bg-white rounded-3xl">
+                                    <img class="object-cover h-56 pt-6 pl-10 my-12 w-50" src="shirt.png" alt="SHIRT">
+                                </div>
+                                        <div class="flex items-center pt-4 bg-gray-200">
+                                            <div class="px-4 py-2">
+                                                <h1 class="text-2xl font-thin text-gray-900 uppercase font-bebas">GREEN SHIRT</h1>
+                                                    <p class="font-bold text-gray-900 text-md">₱699.99</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="items-center justify-center max-w-xs pl-4 my-10 overflow-hidden bg-gray-200 rounded-3xl w-72">
+                                <div class="container w-64 h-64 bg-white rounded-3xl">
+                                    <img class="object-cover h-56 pt-6 pl-8 my-12 w-50" src="jacket.png" alt="jacket">
+                                </div>
+                                        <div class="flex items-center pt-4 bg-gray-200">
+                                            <div class="px-4 py-2">
+                                                <h1 class="text-2xl font-thin text-gray-900 uppercase font-bebas">DENIM JACKET</h1>
+                                                    <p class="font-bold text-gray-900 text-md">₱799.99</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="items-center justify-center max-w-xs pl-4 my-10 overflow-hidden bg-gray-200 rounded-3xl w-72">
+                                <div class="container w-64 h-64 bg-white rounded-3xl">
+                                    <img class="object-cover h-56 pt-6 pl-10 my-12 w-50" src="cap.png" alt="cap">
+                                </div>
+                                        <div class="flex items-center pt-4 bg-gray-200">
+                                            <div class="px-4 py-2">
+                                                <h1 class="text-2xl font-thin text-gray-900 uppercase font-bebas">CAP</h1>
+                                                    <p class="font-bold text-gray-900 text-md">₱599.99</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="items-center justify-center max-w-xs pl-4 my-10 overflow-hidden bg-gray-200 rounded-3xl w-72">
+                                <div class="container w-64 h-64 bg-white rounded-3xl">
+                                    <img class="object-cover h-56 pt-6 my-12 pl-7 w-50" src="scarf.png" alt="scarf">
+                                </div>
+                                        <div class="flex items-center pt-4 bg-gray-200">
+                                            <div class="px-4 py-2">
+                                                <h1 class="text-2xl font-thin text-gray-900 uppercase font-bebas">SCARF</h1>
+                                                    <p class="font-bold text-gray-900 text-md">₱299.99</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="items-center justify-center max-w-xs pl-4 my-10 overflow-hidden bg-gray-200 rounded-3xl w-72">
+                                <div class="container w-64 h-64 bg-white rounded-3xl">
+                                    <img class="object-cover h-56 pt-6 my-12 pl-7 w-50" src="pants.png" alt="pants">
+                                </div>
+                                        <div class="flex items-center pt-4 bg-gray-200">
+                                            <div class="px-4 py-2">
+                                                <h1 class="text-2xl font-thin text-gray-900 uppercase font-bebas">PANTS</h1>
+                                                    <p class="font-bold text-gray-900 text-md">₱999.99</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="items-center justify-center max-w-xs pl-4 my-10 overflow-hidden bg-gray-200 rounded-3xl w-72">
+                                <div class="container w-64 h-64 bg-white rounded-3xl">
+                                    <img class="object-cover h-56 pt-6 my-12 pl-9 w-50" src="socks.png" alt="socks">
+                                </div>
+                                        <div class="flex items-center pt-4 bg-gray-200">
+                                            <div class="px-4 py-2">
+                                                <h1 class="text-2xl font-thin text-gray-900 uppercase font-bebas">SOCKS</h1>
+                                                    <p class="font-bold text-gray-900 text-md">₱199.99</p>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+    </body>
