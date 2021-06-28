@@ -11,7 +11,7 @@
         
         @font-face {
                         font-family: chalkboard;
-                        src: url('chalkboard.ttf');
+                        src: url('public/chalkboard.ttf');
                     }
                     .font-chalkboard {
                         font-family: chalkboard !important;
@@ -19,49 +19,43 @@
         </style>
 </head>
 <body>
-    <div class="relative flex flex-col w-screen h-screen p-6 py-32 overflow-y-hidden bg-no-repeat bg-cover md:p-6 md:flex-row md:bg-cover" style="background-image: url('SOCIAL\ MEDIA.png');">
-        <div>
+    <div class="flex flex-col items-center justify-center w-screen h-screen py-32 overflow-y-hidden bg-cover md:justify-start md:items-start" style="background-image: url('public/socialmedia.png');">
+        <div class="absolute top-3 left-2">
             <a href="LandingPage.html">
-                <img src="backb.png" class="absolute object-right-top w-16 h-16 p-2 transform md:w-20 md:h-20 top-4 hover:scale-125">
+                <img src="public/backb.png" class="w-16 h-16 transform hover:scale-125">
             </a>
         </div>
-        <div class="pl-10 align-text-top md:absolute md:inset-y-20 md:pl-0 md:pt-32">
-            <h2 class="text-gray-900 text-7xl md:ml-12 font-chalkboard md:text-8xl">SOCIAL</h2>
-            <h3 class="text-gray-900 text-7xl md:ml-12 font-chalkboard md:text-8xl">MEDIA</h3>
-        </div>
-            <div class="grid items-center justify-center grid-cols-1 md:gap-40 md:grid-cols-4">
-                    <div>
-                        <a href="https://www.facebook.com/bamboomusiclive/">
-                            <img src="FB.png" class="w-32 h-32 p-2 ml-24 transform md:absolute md:object-left-bottom bottom-14 hover:scale-125">
-                        </a>
-                    </div>
-                        <div>  
-                            <a href="https://twitter.com/Bamboomusiclive">
-                                <img src="TWITT.png" class="w-32 h-32 p-2 ml-24 transform md:absolute md:object-left-bottom bottom-14 hover:scale-125">
-                            </a>
-                        </div>
-                    <div>
-                        <a href="https://www.instagram.com/bamboomuzaklive">
-                            <img src="IG.png" class="w-32 h-32 p-2 ml-24 transform md:absolute md:object-left-bottom bottom-14 hover:scale-125">
-                        </a>
-                    </div>
-                <div>
-                    <button type="button" onclick="toggleElement('contact')">
-                        <img src="MAIL.png" class="w-32 h-32 p-2 ml-24 transform md:absolute bottom-14 hover:scale-125">
-                    </a>
-                </div>
+            <div class="px-24 py-6 text-center ">
+                <h2 class="text-gray-900 text-7xl font-chalkboard md:text-8xl">SOCIAL</h2>
+                <h3 class="text-gray-900 text-7xl font-chalkboard md:text-8xl">MEDIA</h3>
             </div>
-        </div>
+                <div class="flex flex-col items-center justify-center px-24 space-x-0 space-y-2 md:space-x-12 md:flex-row md:py-48">
+                    <a href="https://www.facebook.com/bamboomusiclive/">
+                        <img src="public/FB.png" class="w-24 h-24 transform hover:scale-125">
+                    </a>
+                
+                    <a href="https://twitter.com/Bamboomusiclive">
+                        <img src="public/TWITT.png" class="w-24 h-24 transform hover:scale-125">
+                    </a>
+                    
+                    <a href="https://www.instagram.com/bamboomuzaklive">
+                        <img src="public/IG.png" class="w-24 h-24 transform hover:scale-125">
+                    </a>
+                    
+                    <button type="button" onclick="toggleElement('contact')">
+                        <img src="public/MAIL.png" class="w-24 h-24 transform hover:scale-125">
+                    </button>
+                </div>
     </div>
     <div id="contact" class="fixed inset-0 z-10 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0"> 
+        <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-12 text-center sm:block sm:p-0"> 
         <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" aria-hidden="true"></div>
         <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-        <div class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-gray-200 rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-            <div class="px-4 pt-5 pb-4 bg-gray-200 sm:p-6 sm:pb-4">
+        <div class="inline-block overflow-hidden text-left align-bottom transition-all transform rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="px-4 pt-5 pb-4 bg-black bg-opacity-75 sm:p-6 sm:pb-4">
             <div class="flex items-center justify-center">
                 <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                <h3 class="pb-2 text-2xl font-medium leading-6 text-gray-900 font-bebas" id="modal-title">
+                <h3 class="pb-2 text-3xl font-medium leading-6 text-blue-300 font-bebas" id="modal-title">
                     Contact Us
                 </h3>
                 <div class="mt-2">
@@ -74,7 +68,7 @@
                             <input placeholder="Subject" class="w-full p-2 text-gray-900 border border-gray-700 rounded-md" />
                         </div>
                         <div class="w-full">
-                            <textarea placeholder="Message" class="w-full p-2 text-gray-900 border border-gray-700 rounded-md"></textarea>
+                            <textarea placeholder="Message" class="w-full h-32 p-2 text-gray-900 border border-gray-700 rounded-md"></textarea>
                         </div>
                     </div>
                     
@@ -82,18 +76,18 @@
                 </div>
             </div>
             </div>
-            <div class="px-4 py-3 bg-gray-200 sm:px-6 sm:flex sm:flex-row-reverse">
-            <button type="button" class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-green-600 border border-transparent rounded-md shadow-sm font-bebas hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+            <div class="py-6 bg-black bg-opacity-75 sm:px-6 sm:flex sm:flex-row-reverse">
+            <button type="button" class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-blue-400 border border-transparent rounded-md shadow-sm font-bebas hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
                 Submit
             </button>
-            <button type="button" class="inline-flex justify-center w-full px-4 py-2 mt-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm font-bebas hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onclick="toggleElement('contact')"> 
+            <button type="button" class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm font-bebas hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onclick="toggleElement('contact')"> 
                 Cancel
             </button>
             </div>
         </div>
         </div>
     </div>
-  
+
         <script>
             function toggleElement(paramID)
             {
